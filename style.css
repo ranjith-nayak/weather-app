@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-weight: 600;
+}
+
+body {
+    background: url(bg.jpg); /* Ensure bg.jpg exists in the same directory or use a correct path */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents scrollbars */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+}
+
+.main-container {
+    width: 300px;
+    height: 496px;
+    z-index: 1;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(225, 225, 225, 0.15));
+    border-radius: 12px;
+    backdrop-filter: blur(100px);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.city-input {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 99px;
+    border: 3px solid transparent;
+    background: rgba(0, 0, 0, 0.15);
+    outline: none;
+    font-weight: 500;
+    transition: 0.25s border;
+    padding-right: 45px;
+    color: white;
+}
+
+.city-input:focus {
+    border: 3px solid rgba(0, 0, 0, 0.25);
+}
+
+.city-input::placeholder {
+    color: rgba(225, 225, 225, 0.75);
+}
+
+.search-btn {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    display: flex;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Weather Info Styles */
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.location-date-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.weather-summary-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weather-summary-img {
+    width: 120px;
+    height: 120px;
+}
+
+.weather-summary-info {
+    text-align: end;
+}
+
+.weather-conditions-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.condition-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.condition-item span {
+    font-size: 30px;
+}
+
+.forecast-items-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.forecast-items-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.forecast-items-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 99px;
+}
+
+.forecast-items-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 99px;
+}
+
+.forecast-item {
+    min-width: 100px;
+    background: rgba(225, 225, 225, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    border-radius: 12px;
+    transition: 0.3s background;
+    text-align: center;
+    height: 120px;
+}
+
+.forecast-item:hover {
+    background: rgba(225, 225, 225, 0.15);
+}
+
+.forecast-item-img {
+    width: 40px;
+    height: 40px;
+}
+
+.forecast-item-date {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+    margin: 0;
+}
+
+.forecast-item-temp {
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    margin: 0;
+}
+
+.section-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    margin-top: 25%;
+}
+
+.section-message img {
+    height: 180px;
+    width: auto;
+}
