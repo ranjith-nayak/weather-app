@@ -43,4 +43,4 @@ This project is licensed under the **MIT License**.
 ## 📬 Contact
 📧 Email: 24ranjith2003@gmail.com  
 🐙 GitHub: [ranjith-nayak](https://github.com/ranjith-nayak)  
-💼 LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/ranjith-a-r/)
+💼 LinkedIn: [Ranjith A R](https://www.linkedin.com/in/ranjith-a-r/)
